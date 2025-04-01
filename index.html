@@ -3,9 +3,516 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>HCY個人首頁</title>
+    <style>
+        .section01{
+            height: 100vh;
+            background-color:#c2ae8a;
+            position: relative;
+        }
+        .box01{
+            width: 200px;
+            height: 200px;
+            background-color: #c7bba5;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .box02{
+            width: 200px;
+            height: 200px;
+            background-color: #c7bba5;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .box03{
+            width: 200px;
+            height: 200px;
+            background-color: #c7bba5;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        .box04{
+            width: 200px;
+            height: 200px;
+            background-color: #c7bba5;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+        .userimg{
+            position: absolute;
+            top: 50px;
+            bottom: 50px;
+            right: 50px;
+            left: 50px;
+            background-color: rgb(82, 82, 82);
+            background-image: url(images/spbob.gif);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;/* 等比例縮放 */
+        }
+        .usertext{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            /* transform: translateX(-50%);
+            transform: translateY(-50%); */
+            transform: translate(-50%,-50%);
+            background-color: rgba(77, 57, 0, 0.5);
+            padding: 15px 30px ;
+            border-radius: 20px;
+        }
+        .usertext h1{
+            color: #f9ffc7;
+            text-align: center;
+            font-size: 50px;
+        }
+        .usertext h2{
+            color: aliceblue;
+            text-align: center;
+        }
+        .usertext p{
+            color: aliceblue;
+            font-size: 20px;
+        }
+        .section02{
+            position: relative;
+            background-color: rgb(139, 132, 109);
+            height: 360px;
+        }
+        .box_02_1{
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            background-color: #9c9382;
+            border-radius: 50%;
+            top: 50%;
+            left: 20%;
+            transform: translate(-20%,-50%); 
+            /* margin: 30px; */
+            text-align: center;
+            line-height: 250px;
+            background-image: url(images/Patrick.gif);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+        .section02 .box_02_1 a{
+            text-decoration: none;
+            color: #fff;
+            background-color: rgba(77, 57, 0, 0.5);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .box_02_2{
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            background-color: #9c9382;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%); 
+            /* margin: 30px; */
+            text-align: center;
+            line-height: 250px;
+            background-image: url(images/packtric01.gif);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+        .section02 .box_02_2 a{
+            text-decoration: none;
+            color: #fff;
+            background-color: rgba(77, 57, 0, 0.5);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .box_02_3{
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            background-color: #9c9382;
+            border-radius: 50%;
+            top: 50%;
+            left: 80%;
+            transform: translate(-80%,-50%); 
+            /* margin: 30px; */
+            text-align: center;
+            line-height: 250px;
+            background-image: url(images/packtric02.gif);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+        .section02 .box_02_3 a{
+            text-decoration: none;
+            color: #fff;
+            background-color: rgba(77, 57, 0, 0.5);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .section03{
+            position: relative;
+            background-color: rgb(139, 132, 109);
+            height: 360px;
+        }
+        .box_03_1{
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            background-color: #9c9382;
+            border-radius: 50%;
+            top: 50%;
+            left: 20%;
+            transform: translate(-20%,-50%); 
+            /* margin: 30px; */
+            text-align: center;
+            line-height: 250px;
+            background-image: url(images/otto.gif);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+        .section03 .box_03_1 a{
+            text-decoration: none;
+            color: #fff;
+            background-color: rgba(77, 57, 0, 0.5);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .box_03_2{
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            background-color: #9c9382;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%); 
+            /* margin: 30px; */
+            text-align: center;
+            line-height: 250px;
+            background-image: url(images/minions.gif);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+        .section03 .box_03_2 a{
+            text-decoration: none;
+            color: #fff;
+            background-color: rgba(77, 57, 0, 0.5);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .box_03_3{
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            background-color: #9c9382;
+            border-radius: 50%;
+            top: 50%;
+            left: 80%;
+            transform: translate(-80%,-50%); 
+            /* margin: 30px; */
+            text-align: center;
+            line-height: 250px;
+            background-image: url(images/minions-heart.gif);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+        .section03 .box_03_3 a{
+            text-decoration: none;
+            color: #fff;
+            background-color: rgba(77, 57, 0, 0.5);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .section04{
+            position: relative;
+            background-color: rgb(139, 132, 109);
+            height: 360px;
+        }
+        .box_04_1{
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            background-color: #9c9382;
+            border-radius: 50%;
+            top: 50%;
+            left: 20%;
+            transform: translate(-20%,-50%); 
+            /* margin: 30px; */
+            text-align: center;
+            line-height: 250px;
+            background-image: url(images/pingu01.gif);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+        .section04 .box_04_1 a{
+            text-decoration: none;
+            color: #fff;
+            background-color: rgba(77, 57, 0, 0.5);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .box_04_2{
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            background-color: #9c9382;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%); 
+            /* margin: 30px; */
+            text-align: center;
+            line-height: 250px;
+            background-image: url(images/pingu02.gif);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+        .section04 .box_04_2 a{
+            text-decoration: none;
+            color: #fff;
+            background-color: rgba(77, 57, 0, 0.5);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .box_04_3{
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            background-color: #9c9382;
+            border-radius: 50%;
+            top: 50%;
+            left: 80%;
+            transform: translate(-80%,-50%); 
+            /* margin: 30px; */
+            text-align: center;
+            line-height: 250px;
+            background-image: url(images/pingu03.gif);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+        .section04 .box_04_3 a{
+            text-decoration: none;
+            color: #fff;
+            background-color: rgba(77, 57, 0, 0.5);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .section05{
+            position: relative;
+            background-color: rgb(139, 132, 109);
+            height: 360px;
+        }
+        .box_05_1{
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            background-color: #9c9382;
+            border-radius: 50%;
+            top: 50%;
+            left: 20%;
+            transform: translate(-20%,-50%); 
+            /* margin: 30px; */
+            text-align: center;
+            line-height: 250px;
+            background-image: url(images/spbob01.gif);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+        .section05 .box_05_1 a{
+            text-decoration: none;
+            color: #fff;
+            background-color: rgba(77, 57, 0, 0.5);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .box_05_2{
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            background-color: #9c9382;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%); 
+            /* margin: 30px; */
+            text-align: center;
+            line-height: 250px;
+            background-image: url(images/spbob02.gif);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+        .section05 .box_05_2 a{
+            text-decoration: none;
+            color: #fff;
+            background-color: rgba(77, 57, 0, 0.5);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .box_05_3{
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            background-color: #9c9382;
+            border-radius: 50%;
+            top: 50%;
+            left: 80%;
+            transform: translate(-80%,-50%); 
+            /* margin: 30px; */
+            text-align: center;
+            line-height: 250px;
+            background-image: url(images/spbob03.gif);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+        .section05 .box_05_3 a{
+            text-decoration: none;
+            color: #fff;
+            background-color: rgba(77, 57, 0, 0.5);
+            padding: 10px;
+            border-radius: 10px;
+        }
+       
+    </style>
 </head>
+<!-- 作品/筆記/伺服器 -->
 <body>
-    hello world
+    <div class="section01">
+        <div class="box01"></div>
+        <div class="box02"></div>
+        <div class="box03"></div>
+        <div class="box04"></div>
+        <div class="userimg"></div>
+        <div class="usertext">
+            <h1>SpongeBob</h1>
+            <hr>
+            <h2>你為什麼不問問神奇海螺呢？</h2>
+            <p>我的海綿爺爺說過，「如果我們會飛，頭上會有螺旋漿，屁屁會有噴射引擎」</p>
+        </div>
+    </div>
+    <div class="section02">
+        <div class="box_02_1">
+            <h2><a href="http://192.168.10.60/web202411" target="_blank">web</a></h2>
+        </div>
+        <div class="box_02_2">
+            <h2><a href="http://192.168.10.60/phpinfo.php" target="_blank">phpinfo</a></h2>
+        </div>
+        <div class="box_02_3">
+            <h2><a href="http://192.168.10.60/net2ftp" target="_blank">net2ftp</a></h2>
+        </div>
+    </div>
+    <div class="section03">
+        <div class="box_03_1">
+            <h2><a href="http://192.168.10.60/phpMyAdmin" target="_blank">phpMyAdmin</a></h2>
+        </div>
+        <div class="box_03_2">
+            <h2><a href="http://192.168.10.60/wp01" target="_blank">wp01</a></h2>
+        </div>
+        <div class="box_03_3">
+            <h2><a href="http://192.168.10.60/wp02" target="_blank">wp02</a></h2>
+        </div>
+    </div>
+    <div class="section04">
+        <div class="box_04_1">
+            <h2><a href="http://192.168.10.60/food" target="_blank">food</a></h2>
+        </div>
+        <div class="box_04_2">
+            <h2><a href="http://192.168.10.60/web202411/20241203-1.html" target="_blank">20241203-1</a></h2>
+        </div>
+        <div class="box_04_3">
+            <h2><a href="http://192.168.10.60/web202411/20241203-2.html" target="_blank">20241203-2</a></h2>
+        </div>
+    </div>
+    <div class="section05">
+        <div class="box_05_1">
+            <h2><a href="http://192.168.10.60/web202411/20241203-3.html" target="_blank">20241203-3</a></h2>
+        </div>
+        <div class="box_05_2">
+            <h2><a href="http://192.168.10.60/web202411/20241205-2.html" target="_blank">20241205-2</a></h2>
+        </div>
+        <div class="box_05_3">
+            <h2><a href="http://192.168.10.60/web202411/20241205-3.html" target="_blank">20241205-3</a></h2>
+        </div>
+    </div>
+    <div class="section02">
+        <div class="box_02_1">
+            <h2><a href="http://192.168.10.60/web202411/20241205-4.html" target="_blank">20241205-4</a></h2>
+        </div>
+        <div class="box_02_2">
+            <h2><a href="http://192.168.10.60/web202411/20241210-1.html" target="_blank">20241210-1</a></h2>
+        </div>
+        <div class="box_02_3">
+            <h2><a href="http://192.168.10.60/web202411/20241210-2.html" target="_blank">20241210-2</a></h2>
+        </div>
+    </div>
+    <div class="section03">
+        <div class="box_03_1">
+            <h2><a href="http://192.168.10.60/web202411/20241210-3.html" target="_blank">20241210-3</a></h2>
+        </div>
+        <div class="box_03_2">
+            <h2><a href="http://192.168.10.60/web202411/20241212-1.html" target="_blank">20241212-1</a></h2>
+        </div>
+        <div class="box_03_3">
+            <h2><a href="http://192.168.10.60/web202411/20241212-2.html" target="_blank">20241212-2</a></h2>
+        </div>
+    </div>
+    <div class="section04">
+        <div class="box_04_1">
+            <h2><a href="http://192.168.10.60/web202411/20241212-3.html" target="_blank">20241212-3</a></h2>
+        </div>
+        <div class="box_04_2">
+            <h2><a href="http://192.168.10.60/web202411/20241217-1.html" target="_blank">20241217-1</a></h2>
+        </div>
+        <div class="box_04_3">
+            <h2><a href="http://192.168.10.60/web202411/20241217-2.html" target="_blank">20241217-2</a></h2>
+        </div>
+    </div>
+    <div class="section05">
+        <div class="box_05_1">
+            <h2><a href="http://192.168.10.60/web202411/20241217-3.html" target="_blank">20241217-3</a></h2>
+        </div>
+        <div class="box_05_2">
+            <h2><a href="http://192.168.10.60/web202411/20241217-4.html" target="_blank">20241217-4</a></h2>
+        </div>
+        <div class="box_05_3">
+            <h2><a href="http://192.168.10.60/web202411/20241217-5.html" target="_blank">20241217-5</a></h2>
+        </div>
+    </div>
+    <div class="section02">
+        <div class="box_02_1">
+            <h2><a href="http://192.168.10.60/web202411/20241217-6.html" target="_blank">20241217-6</a></h2>
+        </div>
+        <div class="box_02_2">
+            <h2><a href="http://192.168.10.60/web202411/20241219-1.html" target="_blank">20241219-1</a></h2>
+        </div>
+        <div class="box_02_3">
+            <h2><a href="http://192.168.10.60/web202411/20241219-2.html" target="_blank">20241219-2</a></h2>
+        </div>
+    </div>
+    <div class="section03">
+        <div class="box_03_1">
+            <h2><a href="http://192.168.10.60/web202411/20241219-3.html" target="_blank">20241219-3</a></h2>
+        </div>
+        <div class="box_03_2">
+            <h2><a href="#" target="_blank"></a></h2>
+        </div>
+        <div class="box_03_3">
+            <h2><a href="#" target="_blank"></a></h2>
+        </div>
+    </div>
 </body>
 </html>
